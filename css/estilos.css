@@ -127,6 +127,7 @@ width: 0%;
   animation: movimientoY 2.5s linear infinite;
   position: relative;
   z-index: 9;
+  margin-left: 15%;
 }
 #particles-js {
 	height: 85%; 
