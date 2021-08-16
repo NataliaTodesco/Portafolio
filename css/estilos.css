@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong&display=swap');
+:root{
+  --color-rosa-claro:#fcd5ce;
+  --color-rosa: #ffadad;
+  --color-azul-oscuro: #264653;
+  --color-rojo:#d9534f;
+  --color-crudo:#CB997E;
+  --color-gris-claro:#A5A58D;
+  --color-gris-oscuro:#6b705c;
+}
+/*--------------------  BODY --------------------*/
+body{
+  font-family: 'Overpass', sans-serif;
+}
+.r-link{
+	--uirLinkDisplay: var(--rLinkDisplay, inline-block);
+	--uirLinkTextColor: var(--rLinkTextColor);
+	--uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+
+	display: var(--uirLinkDisplay) !important;
+	color: var(--uirLinkTextColor) !important;
+	text-decoration: var(--uirLinkTextDecoration) !important;
+}
+.container{
+	--uirTitleMarginTop: var(--rTitleMarginTop, 0);
+	--uirTitleMarginBottom: var(--rTitleMarginBottom, 0);
+
+	margin-top: var(--uirTitleMarginTop) !important;
+	margin-bottom: var(--uirTitleMarginBottom) !important;
+}
+.r-link{
+	--uiAnimatedUnderlineWidth: var(--animatedUnderlineWidth, 100%);
+	--uiAnimatedUnderlineHeight: var(--animatedUnderlineHeight, 2px);
+	--uiAnimatedUnderlineBgColor: var(--animatedUnderlineBgColor, currentColor);
+	--uiAnimatedUnderlinePositionX: var(--animatedUnderlinePositionX, left);
+	--uiAnimatedUnderlinePositionY: var(--animatedUnderlinePositionY, bottom);
+
+	background-image: linear-gradient(0, var(--uiAnimatedUnderlineBgColor) 0, var(--uiAnimatedUnderlineBgColor));
+	background-size: var(--uiAnimatedUnderlineWidth) var(--uiAnimatedUnderlineHeight);
+	background-position: var(--uiAnimatedUnderlinePositionX) var(--uiAnimatedUnderlinePositionY);
+	background-repeat: no-repeat;
+	
+	will-change: background-size;
+	transition: background-size .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.type1{
+	--animatedUnderlineHeight: 1rem;
+	--animatedUnderlineBgColor: var(--color-rosa-claro);
+}	
+.type2{
+	--animatedUnderlineHeight: 1rem;
+	--animatedUnderlineBgColor: var(--color-rojo);
+}	
+.type3{
+	--animatedUnderlineHeight: 1rem;
+	--animatedUnderlineBgColor: var(--color-azul-oscuro);
+}	
+
+.r-link:hover{
+	--animatedUnderlineHeight: 100%;
+}
+
+/*-------------------- NAVBAR --------------------*/
+#navbar{
+  background-color: var(--color-gris-claro);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav-item{
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2 3 0 rgba(0, 0, 0, 0.1);
+}
+.nav-item:hover{
+  background-color: #bebea3;
+}
+#navbarScroll{
+  text-align: center;
+}
+#navbar .btn{
+  margin-left: 0%;
+}
+#logo{
+  fill: none;
+  stroke-dasharray: 1950;
+  stroke-dashoffset: 1950;
+  animation: animacion 10s infinite ease-in-out;
+  margin-right: 2%;
+}
+.progreso{
+width: 100%;
+height: 5px;
+background: white;
+}
+.barra{
+height: 5px;
+background: var(--color-rojo);
+width: 0%;
+}
+.btn{
+  background-color: var(--color-azul-oscuro);
+  color: white;
+  margin-left: 6%;
+  outline: none;
+}
+.btn:hover{
+  color: #000;
+  background-color: var(--color-rosa-claro);
+  border: 1px solid  #000;
+}
+
+/*-------------------- HEAD --------------------*/
+.jumbotron{
+  background: var(--color-rosa-claro); 
+  background: -webkit-linear-gradient(to right, var(--color-rosa-claro), #fff);  
+  background: linear-gradient(to right, var(--color-rosa-claro), #fff); 
+  text-align: center;
+  position: relative;
+  margin-top: 3%;
+}
+.imgHead{
+  animation: movimientoY 2.5s linear infinite;
+  position: relative;
+  z-index: 9;
+}
+#particles-js {
+	height: 85%; 
+	width: 100%;
+  position: absolute;
+  z-index: 5;
+}
+/*-------------------- ABOUT --------------------*/
+#foto{
+  border-radius: 50%;
+}
+#procesing #circulo{
+  animation: movimientoX 1s linear infinite;
+}
+#About{
+    background-color: var(--color-gris-oscuro);
+    color: white;
+    padding: 50px;
+}
+.wave{
+  position: absolute;
+  width: 102%;
+  bottom: 0%;
+  margin-left: -4.5%;
+  z-index: 6;
+}
+
+/*-------------------- EDUCATION --------------------*/
+#about2{
+  padding: 50px;
+}
+
+.timeline-heading{
+  margin: auto;
+  display: table;
+}
+.timeline-heading h4{
+  float: left;
+  position: relative;
+}
+.timeline-heading h4 span{
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: white;
+  border-left: 1px solid #000;
+  animation: maquina 3s infinite alternate steps(13);
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 50%;
+  border: 1px solid #d4d4d4;
+  margin: 3%;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li.timeline-inverted + li:not(.timeline-inverted),
+.timeline > li:not(.timeline-inverted) + li.timeline-inverted {
+margin-top: -60px;
+}
+
+.timeline > li:not(.timeline-inverted) {
+padding-right:90px;
+}
+
+.timeline > li.timeline-inverted {
+padding-left:90px;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid var(--color-rojo);
+  border-right: 0 solid var(--color-rojo);
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+/*-------------------- LENGUAJES --------------------*/
+
+/*-------------------- HERRAMIENTAS --------------------*/
+
+/*-------------------- FRAMEWORKS --------------------*/
+.f{
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 45px;
+}
+.arrow{
+  margin-left: 15px;
+}
+.fram{
+  margin-left: 25%;
+}
+.frame{
+  margin-left: 20%;
+  margin-top: 4%;
+}
+.framew{
+  margin-left: 19%;
+  margin-top: 3%;
+  height: 110px;
+}
+#GroupGorro{
+  transform: scale(.9);
+  animation: escalar 2s 2s both infinite;
+}
+#brazo{
+  transform: translate(0,-1%);
+  animation: brazo 2s 2s both infinite;
+}
+#Pelo{
+  transform: skewX(10deg);
+  animation: skew 3s 3s both infinite;
+}
+#fpImg{
+  margin-left: 5%;
+}
+#p{
+  margin-left: 6%;
+}
+
+/*-------------------- PROGRAMAS --------------------*/
+.p{
+  writing-mode: vertical-lr;
+  font-size: 45px;
+}
+
+/*-------------------- PROJECTS --------------------*/
+#Projects{
+    background-color: var(--color-crudo);
+    padding: 45px;
+    color: white;
+}
+#Projects h1{
+  margin-bottom: 2%;
+}
+.card{
+  background-color: transparent;
+  border-radius: 10px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--color-azul-oscuro);
+  border-radius: 10px;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hoverImg{
+  position: relative;
+}
+
+/*-------------------- CONTACTO --------------------*/
+.drawSocial{
+  background:  linear-gradient(to bottom, var(--color-crudo) 50%, var(--color-azul-oscuro) 50%);
+  padding: 2%;
+}
+.contacto{
+  padding: 4%;
+  padding-bottom: 0;
+  background-image: 
+  linear-gradient(45deg, #ffffff 80%, transparent 50.1%),
+  linear-gradient(
+    #ffffff,
+    #ffffff 6px,
+    var(--color-rosa-claro) 6px,
+    var(--color-rosa-claro)
+  );
+  background-size: 100%, 100% 12px;
+}
+.contacto:hover{
+  background-image: 
+  linear-gradient(45deg, #ffffff 80%, transparent 50.1%),
+  linear-gradient(
+    #ffffff,
+    #ffffff 6px,
+    var(--color-rojo) 6px,
+    var(--color-rojo)
+  );
+}
+.contacto:hover .btn{
+  background-color: var(--color-rojo);
+}
+
+.form-control{
+  background: linear-gradient(to top, var(--color-rosa-claro), #fff);
+}
+#Insta{
+  transform: translateX(-3%);
+  animation: movimientoX 3.1s ease infinite;
+}
+#Twit{
+  transform: translateX(-3%);
+  animation: movimientoX 3.2s ease infinite;
+}
+#Face{
+  transform: translateX(-3%);
+  animation: movimientoX 3.3s ease infinite;
+}
+
+/*-------------------- FOOTER --------------------*/
+#footer{
+  background-color: var(--color-azul-oscuro);
+  color: white;
+}
+
+/*-------------------- ANIMACIONES --------------------*/
+
+@keyframes animacion{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes movimientoX{
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(15px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes movimientoY{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes rotar{
+  to{
+    transform: rotate(0deg);
+  }
+  from{
+    transform: rotate(360deg);
+  }
+}
+@keyframes maquina{
+  from{
+    width: 100%;
+  }
+  to{
+    width: 0;
+  }
+}
+@keyframes escalar {
+  50%{
+    transform: translate(0,3%);
+  }
+  100%{
+    transform: scale(.9);
+  }
+}
+@keyframes brazo {
+  50%{
+    transform: unset;
+  }
+  100%{
+    transform: translate(0,-1%);
+  }
+}
+@keyframes skew {
+  50%{
+    transform: unset;
+  }
+  100%{
+    transform: skewX(10deg);
+  }
+}
+
+@keyframes fondo{
+  0%, 20%{
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/531/951/621/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-preview.jpg);
+  }
+  25%, 45%{
+    background-image: url(IMAGENES/FondoTexto1.jpg);
+  }
+  50%, 70%{
+    background-image: url(IMAGENES/FondoTexto2.jpg);
+  }
+  75%, 90%{
+    background-image: url(IMAGENES/FondoTexto3.jpg);
+  }
+  95%, 100%{
+    background-image: url(IMAGENES/FondoTexto4.jpg);
+  }
+}
+
+@media(max-width:650px){
+  .imgHead{
+    width: 300px;
+  }
+  .p,.f{
+    writing-mode: horizontal-tb;
+    font-size: 37px;
+  }
+  .p{
+    margin-left: -80%;
+    margin-right: 0;
+    position: relative;
+    margin-top: 180%;
+  }
+  .f{
+    transform: rotate(0deg);
+    margin-left: 10%;
+  }
+  .timeline:before{
+    visibility: hidden;
+    position: absolute;
+  }
+  .timeline > li > .timeline-panel:before, .arrow, #arrow,.animation{
+    visibility: hidden;
+  }
+  .timeline > li > .timeline-panel {
+    width: 190%;
+    margin-top: 50%;
+    position: relative;
+  }
+  .img-fluid, #procesing{
+    width: 0;
+    height: 0;
+  }
+  .jumbotron{
+    margin-top: 12%;
+  }
+  .icono{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    animation: none;
+  }
+  .arrow{
+    height: 0;
+    width: 0;
+    left: 0;
+    right: 0;
+  }
+  #navbarScroll{
+    margin-left: 0;
+  }
+
+}
+@media(max-width:991px){
+  #p,#fpImg{
+    margin-left: 8%;
+  }
+  .img-fluid{
+    width: 0;
+    height: 0;
+  }
+  .p{
+    margin-left: -80%;
+  }
+  .overlay{
+    font-size: 50%;
+  }
+}
+@media(min-width:990px){
+  .imgHead{
+    width: 400px;
+  }
+}
