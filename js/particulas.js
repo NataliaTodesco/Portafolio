@@ -27,12 +27,12 @@ particlesJS(
             }
           },
           "opacity": {
-            "value": 7,
+            "value": 10,
             "random": false,
             "anim": {
               "enable": false,
               "speed": 1,
-              "opacity_min": 1,
+              "opacity_min": 5,
               "sync": false
             }
           },
@@ -92,7 +92,7 @@ particlesJS(
               "distance": 400,
               "size": 40,
               "duration": 2,
-              "opacity": 10,
+              "opacity": 12,
               "speed": 3
             },
             "repulse": {

@@ -249,26 +249,6 @@ padding-left:90px;
 /*-------------------- HERRAMIENTAS --------------------*/
 
 /*-------------------- FRAMEWORKS --------------------*/
-.f{
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  font-size: 45px;
-}
-.arrow{
-  margin-left: 15px;
-}
-.fram{
-  margin-left: 25%;
-}
-.frame{
-  margin-left: 20%;
-  margin-top: 4%;
-}
-.framew{
-  margin-left: 19%;
-  margin-top: 3%;
-  height: 110px;
-}
 #GroupGorro{
   transform: scale(.9);
   animation: escalar 2s 2s both infinite;
@@ -284,15 +264,8 @@ padding-left:90px;
 #fpImg{
   margin-left: 5%;
 }
-#p{
-  margin-left: 6%;
-}
 
 /*-------------------- PROGRAMAS --------------------*/
-.p{
-  writing-mode: vertical-lr;
-  font-size: 45px;
-}
 
 /*-------------------- PROJECTS --------------------*/
 #Projects{
@@ -371,9 +344,6 @@ padding-left:90px;
     var(--color-rojo) 6px,
     var(--color-rojo)
   );
-}
-.contacto:hover .btn{
-  background-color: var(--color-rojo);
 }
 
 .form-control{
@@ -490,20 +460,6 @@ padding-left:90px;
   .imgHead{
     width: 300px;
   }
-  .p,.f{
-    writing-mode: horizontal-tb;
-    font-size: 37px;
-  }
-  .p{
-    margin-left: -80%;
-    margin-right: 0;
-    position: relative;
-    margin-top: 180%;
-  }
-  .f{
-    transform: rotate(0deg);
-    margin-left: 10%;
-  }
   .timeline:before{
     visibility: hidden;
     position: absolute;
@@ -512,9 +468,10 @@ padding-left:90px;
     visibility: hidden;
   }
   .timeline > li > .timeline-panel {
-    width: 190%;
-    margin-top: 50%;
+    width: 100%;
+    margin-top: 30%;
     position: relative;
+    font-size: 95%;
   }
   .img-fluid, #procesing{
     width: 0;
@@ -523,20 +480,14 @@ padding-left:90px;
   .jumbotron{
     margin-top: 12%;
   }
-  .icono{
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    animation: none;
-  }
-  .arrow{
-    height: 0;
-    width: 0;
-    left: 0;
-    right: 0;
-  }
   #navbarScroll{
     margin-left: 0;
+  }
+  .timeline-title{
+    font-size: 110%;
+  }
+  .text {
+    font-size: 200%;
   }
 
 }
