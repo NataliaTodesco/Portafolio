@@ -65,6 +65,7 @@ body{
 /*-------------------- NAVBAR --------------------*/
 #navbar{
   background-color: var(--color-gris-claro);
+  font-size: large;
   position: fixed;
   width: 100%;
   top: 0;
@@ -107,11 +108,19 @@ width: 0%;
   color: white;
   margin-left: 6%;
   outline: none;
+  font-size: 1.1rem;
 }
 .btn:hover{
-  color: #000;
-  background-color: var(--color-rosa-claro);
-  border: 1px solid  #000;
+  color: #fff;
+  background-color: #497d92;
+  border: 1px solid  var(--color-azul-oscuro);
+}
+
+.activo{
+  margin-left: 15%;
+  width: 70%;
+  margin-top: -.6rem;
+  border-bottom: 3px solid var(--color-azul-oscuro);
 }
 
 /*-------------------- HEAD --------------------*/
@@ -349,6 +358,13 @@ padding-left:90px;
 .form-control{
   background: linear-gradient(to top, var(--color-rosa-claro), #fff);
 }
+
+.form-control:focus{
+  text-decoration: none;
+  border: 1px solid #d9534f;
+  box-shadow: none;
+}
+
 #Insta{
   transform: translateX(-3%);
   animation: movimientoX 3.1s ease infinite;
@@ -457,6 +473,9 @@ padding-left:90px;
 }
 
 @media(max-width:650px){
+  h1{
+    font-size: 2rem;
+  }
   .imgHead{
     width: 300px;
   }
@@ -488,6 +507,9 @@ padding-left:90px;
   }
   .text {
     font-size: 200%;
+  }
+  .imgHead{
+    margin-left: 0;
   }
 
 }

@@ -43,6 +43,31 @@ class TextoAnimado {
 			}, 30);
 		});
 		
+		setTimeout(() => {
+			let cuenta = 0;
+
+			const intervalo = setInterval(() => {
+				if(cuenta < this.texto.children.length){
+					this.texto.children[cuenta].classList.add('animacion');
+					cuenta += 1;
+				} else {
+					clearInterval(intervalo);
+				}
+			}, 30);
+		}, 1000);
+
+		setTimeout(() => {
+			let cuenta = 0;
+
+			const intervalo = setInterval(() => {
+				if(cuenta < this.texto.children.length){
+					this.texto.children[cuenta].classList.remove('animacion');
+					cuenta += 1;
+				} else {
+					clearInterval(intervalo);
+				}
+			}, 30);
+		}, 2000);
 	}
 }
 
