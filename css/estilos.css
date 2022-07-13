@@ -86,11 +86,11 @@ body{
 #navbar .btn{
   margin-left: 0%;
 }
-#logo{
+#logoN{
   fill: none;
   stroke-dasharray: 1950;
   stroke-dashoffset: 1950;
-  animation: animacion 10s infinite ease-in-out;
+  animation: animacion 10s infinite ease alternate;
   margin-right: 2%;
 }
 .progreso{
